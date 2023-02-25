@@ -1,0 +1,60 @@
+body {
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+   background:#F7A4A4;
+   height:90vh;
+   width:90vw;
+   margin-left: 5vw;
+   margin-top: 5vh
+}
+
+h3{
+padding-top: 100px;
+}
+
+.massageContainer{
+   width:300px;
+   height:100px;
+   border: 1px solid black;
+   margin-top: -140px;
+   line-height: 60px;
+   background: #B6E2A1;
+   
+}
+.numbers{
+  margin-top: 50px;
+  display:flex;
+  margin-left: 20px
+}
+
+.btn{
+   height: 100px;
+   width: 150px;
+   background: #FFFBC1;
+   font-size:50px ;
+   text-align: center ;
+   
+}
+.scoresContainer{
+   margin-top: -40px;
+   display :flex;
+   justify-content:space-between;
+}
+.scoresContainer h6{
+   font-size: 20px
+}
+.buttons{
+   display: flex;
+   flex-direction:column ;
+}
+.btn2{
+   height: 50px;
+   font-size: 20px;
+   font-style:sans-serif;
+   font-weight: 5px;
+   background:#B6E2A1;
+}
