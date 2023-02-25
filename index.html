@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <div class="main">
+     <center> <h3>Guess number between 1 To 20<h3></center>
+     <center> <div class="massageContainer">
+         <p class="massage">Guess The number❓</p>
+         </div></center>
+         <div class="numbers">
+      <input class="btn" id="guess" type="number" value="">
+      <input class="btn" id="secret" readonly type="text" value="?">
+          </div>
+          <div class="scoresContainer">
+             <h6>Score:<span class="score"> 20</span></h6>
+             <h6>Highes Score:<span class="highScore">0</span></h6>
+          </div>
+          <div class="buttons">
+             <input class="btn2" id="check" type="button" value="Check">
+             <input class="btn2" id="reset" type="button" value="reset">
+          </div>
+   </div>
+        <script>
+            let secreteNumber = Math.trunc(Math.random()*20) +1
+let highScore = 0
+let score = 20
+document.querySelector('#check').addEventListener('click', function(){
+   let guess= Number(document.querySelector('#guess').value)
+   if(!guess){
+     document.querySelector('.massage').textContent="No Number ❓❓❓"
+   }else if(guess === secreteNumber){
+   document.querySelector('.massage').textContent="Correct Number ✅✅✅"
+   document.querySelector('#secret').value =secreteNumber
+   if(score > highScore){
+      document.querySelector('.highScore').textContent = score
+   }
+   }else if(guess !== secreteNumber){
+      if (score > 1) {
+  document.querySelector('.massage').textContent =guess >secreteNumber ?"Too High⬆️":"Too Low⬇️";
+         score--;
+         document.querySelector('.score').textContent = score
+         document.querySelector('.massageContainer').style.backgroundColor = '#D61355'
+      }else {
+         let massage = document.querySelector('.massage').textContent = "You Loos😞"
+         document.querySelector('.score').textContent = '0'
+      }
+   
+   }/*else if(guess > secreteNumber){
+      if (score > 1){
+      document.querySelector('.massage').textContent="Too High⬆️" ;
+       score--;
+    document.querySelector('.score').textContent = score
+    document.querySelector('.massageContainer').style.backgroundColor = '#D61355'
+    }else{
+       let massage = document.querySelector('.massage').textContent = "You Loos😞"
+       document.querySelector('.score').textContent = '0'
+    }
+   }/*else if(guess<secreteNumber){
+      
+      if (score>1) {
+      document.querySelector('.massage').textContent = "Too Low⬇️"
+     score--;
+    document.querySelector('.score').textContent = score
+    document.querySelector('.massageContainer').style.backgroundColor = '#D61355'
+      }else{
+     document.querySelector('.massage').textContent="You Loos😞"
+     document.querySelector('.score').textContent = '0'
+      }
+    }*/
+})
+
+document.querySelector('#reset').addEventListener('click',function(){
+   document.querySelector('.score').textContent = 20;
+   score = 20
+   document.querySelector('#guess').value = 0
+   secreteNumber = Math.trunc(Math.random()*20) +1
+  secreteNumber = Math.trunc(Math.random()*20) +1 
+ document.querySelector('#secret').value = "?"
+  document.querySelector('.massage').textContent="Guess The number❓"
+})
+
+        </script>
+    </body>
+</html>
