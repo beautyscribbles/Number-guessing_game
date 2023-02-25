@@ -5,8 +5,7 @@
 
 
 <h3>Technologies Used 🤖</h3>
-The game was built using HTML and CSS only. No JavaScript was used.
-
+The game was built using HTML and CSS only. 
 <h3>Contributing💥</h3>
 Contributions are welcome! if you have any suggestions, please create a pull request or open an issue. 
 
